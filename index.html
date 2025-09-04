@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Preregistro</title>
+<!-- Bootstrap 5 -->
+ <link rel="stylesheet" href="estilos.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+body { background: #f7f7f8; }
+.brand-bar { background: rgb(67,16,27); color: #fff; }
+.required::after { content:" *"; color: #dc3545; }
+</style>
+  <style>
+    /* Compactar texto */
+    p, label {
+      margin: 0;
+      padding: 0;
+      line-height: 1.1;
+    }
+
+    /* Compactar checkboxes */
+    .form-check {
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1 !important;
+    }
+
+    .form-check-input {
+      margin-top: 0 !important;
+      margin-right: 4px;
+    }
+
+    .form-check-label {
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1 !important;
+    }
+
+    /* Grid principal */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 200px auto 250px; 
+      gap: 15px;
+      align-items: start; /* pega los contenidos arriba */
+    }
+
+    /* Contenedor interno de checkboxes en 2 columnas */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;  /* espacio entre columnas */
+      row-gap: 1px;      /* 🔹 espacio mínimo entre filas */
+    }
+  </style>
+</head>
+<body>
+   <!-- --------------------------------------------------- P A R T E 1 -------------------------------------------------------- -->
+<!-- Barra superior -->
+<div class="brand-bar py-3 mb-4">
+<div class="container d-flex justify-content-between align-items-center">
+      <img style="width: 185px; height: 78px;" alt="logedo" src="rcs_lourdesc\RcsLu\Preregistro\images\logo_EDoM%C3%A9x.jpg">
+    <img style="width: 185px; height: 78px;" alt="logob" src="rcs_lourdesc\RcsLu\Preregistro\images\logo_gob.jpg">
+    <img style="width: 180px; height: 78px;" alt="logsec" src="rcs_lourdesc\RcsLu\Preregistro\images\logo_SECAmpo.jpg">
+<h1 class="h4 m-0">Formato D-1</h1>
+<span class="big opacity-75">Secretaría del Campo<br>Preregistro de apoyos</br></span>
+</footer>
+</div>
+</div>
+
+ <!-- pie de página para info de contactos -->
+  <footer style ="
+  background-color: rgb(67,16,27);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 13%;
+  font-family: Arial, sans-serif;
+">
+  <p>📍 Dirección: Conjunto SEDAGRO s/n, Rancho San Lorenzo, Metepec, Estado de México. C.P. 52140</p>
+  <p>📍 SECAMPO, Subdirección de Planeación Sectorial: Unidad de Información, Planeación, Programación y Evaluación (UIPPE)</p>
+  <p>📞 Teléfono: 722 275 6421. Ext: 17047 | ✉️ Correo: sectorial.uippe@edomex.gob.mx</p>  
+</footer>
+ <!-- Aviso importante-->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 col-xl-9"> <!-- ahora sí más ancho -->
+      <div class="card shadow-sm mb-5">
+        <div class="card-body p-4 p-md-5">
+<h2 class="h5 mb-4"style= "font-family: Arial, sans-serif; font-size: 10px;color: #333; margin: 0; line-height: 9px;"><b>AVISO IMPORTANTE:</b> Antes de llenar el presente formato, revise el Aviso de Privacidad del Sistema de Datos Presonales
+  de la Secretaría del Campo, el cual se pondrá a su disposición en el momento de requisitar su solicitud, también lo encontrará en el 
+  sitio web: http://secampo.edomex.gob.mx/aviso_privacidad o el Módulo de Acceso a la Unidad de Información o en la Delegación Regional
+  de Desarrollo Agropecuario correspondientee de la Secretaría del Campo.
+</h2>
+ <!-- Fecha de expedición -->
+<form>
+  <label for="fecha">Fecha de expedición:</label>                    
+  <input type="date" id="fecha" name="fecha">
+  <button type="submit">Enviar</button>
+</form>
+ 
+ <!-- Checks boxs de los programas  -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+  
+  <!------------------------------------- Columna 1 Programa Por el Rescate al Campo--------------------------------------------->
+  <div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="variante" id="variante1" value="Programa Por el Rescate al Campo" required />
+      <label class="form-check-label" for="variante1"><b>Programa Por el Rescate al Campo</b></label>
+    </div>
+    <p><b>Vertiente:</b></p>
+    <div class="d-flex flex-wrap gap-3">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="vertiente" id="vert1" value="Por un Campo Digno" required />
+        <label class="form-check-label" for="vert1">Por un Campo Digno</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="vertiente" id="vert2" value="Transformación y Comercialización Agropecuaria" required />
+        <label class="form-check-label" for="vert2">Transformación y Comercialización Agropecuaria</label>
+      </div>
+    </div>
+  </div>
+
+  <!-------------------------------------- Columna 2 Programa Transformando el Campo--------------------------------------------->
+  <div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="variante" id="variante2" value="Programa Transformando el Campo" required />
+      <label class="form-check-label" for="variante2"><b>Programa Transformando el Campo</b></label>
+    </div>
+    <p><b>Vertiente:</b></p>
+    <div class="d-flex flex-wrap gap-3">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="vertiente" id="vert3" value="Agropecuaria y Acuícola" required />
+        <label class="form-check-label" for="vert3">Agropecuaria y Acuícola</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="vertiente" id="vert4" value="Infraestructura Rural" required />
+        <label class="form-check-label" for="vert4">Infraestructura Rural</label>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <div class="form-grid">
+    
+    <!-- Columna 1: Título -->
+    <p style="font-weight: bold;">Tipo de solicitud:</p>
+    
+    <!-- Columna 2: Checkboxes en 2 columnas compactas -->
+    <div class="checkbox-grid">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sol1" name="solicitud" value="Persona física" />
+        <label class="form-check-label" for="sol1">Persona física</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sol2" name="solicitud" value="Ayuntamiento" />
+        <label class="form-check-label" for="sol2">Ayuntamiento</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sol3" name="solicitud" value="Organización de personas productoras" />
+        <label class="form-check-label" for="sol3">Organización de personas productoras</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sol4" name="solicitud" value="Institución educativa" />
+        <label class="form-check-label" for="sol4">Institución educativa</label>
+      </div>
+    </div>
+    
+    <!-- Columna 3: Delegación regional -->
+    <div style="display: flex; flex-direction: column;">
+      <label for="delegacion" style="font-weight: bold; margin-bottom: 2px;">Delegación Regional de Desarrollo Agropecuario:</label>
+      <input type="text" id="delegacion" name="delegacion" placeholder="Escribe aquí..." 
+             style="padding: 4px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+    
+  </div>
+
+
+ <!-- --------------------------------------------------- P A R T E 2 -------------------------------------------------------- -->
+<!-- Nombre del productor-->
+<br><p style="text-align: center;">Persona productora y/o representante</p></br>
+<form id="formPrerregistro" class="needs-validation" novalidate>
+<div class="row g-1">
+<div class="col-md-4">
+<label for="nombre" class="form-label required">Nombre(s)</label>
+<input type="text" class="form-control" id="nombre" name="nombre" required />
+<div class="invalid-feedback">Por favor, escribe tu(s) nombre(s).</div>
+</div>
+<div class="col-md-4">
+<label for="apellidos" class="form-label required">Apellido paterno</label>
+<input type="text" class="form-control" id="apellidos" name="apellido paterno" required />
+<div class="invalid-feedback">Indica tu apellido.</div>
+</div>
+<div class="col-md-4">
+<label for="apellidos" class="form-label required">Apellido materno</label>
+<input type="text" class="form-control" id="apellidos" name="apellido materno" required />
+<div class="invalid-feedback">Indica tu apellido.</div>
+</div>
+
+<!-- CURP-->
+<div class="col-12 mb-3 text-center">
+  <div class="d-inline-flex align-items-center justify-content-center">
+    <label for="curp" class="form-label required me-2 mb-0">CURP:</label>
+    <div id="curp-inputs" class="d-flex gap-0">
+      <script>
+        // Genera 18 inputs chiquitos
+        document.write(
+          Array.from({ length: 18 }, (_, i) =>
+            `<input type="text" class="form-control text-uppercase curp-char" 
+                     maxlength="1" pattern="[A-Za-z0-9]" 
+                     style="width: 15px; height: 22px; padding: 2px; text-align:center; font-size:12px;" 
+                     required 
+                     data-index="${i}" />`
+          ).join("")
+        );
+      </script>
+    </div>
+  </div>
+  <!-- Campo oculto para guardar la CURP completa -->
+  <input type="hidden" id="curp" name="curp" required />
+  <div class="invalid-feedback">La CURP debe tener 18 caracteres.</div>
+</div>
+
+<!--Grado de estudios-->
+<style>
+  .form-check-label {
+    margin-left: 0px;  /* prueba con 0px si lo quieres pegado del todo */
+  }
+  /* Hace que los checkboxes estén muy pegados entre sí */
+  .grado-check .form-check {
+    margin-bottom: 2px;   /* espacio mínimo entre filas */
+  }
+  .grado-check .form-check-input {
+    margin-top: 0.2rem;   /* alinea verticalmente la cajita */
+  }
+</style>
+
+<div class="col-12 mb-3">
+  <div class="row text-center grado-check">
+    <!-- Columna 1 -->
+    <div class="col-2 d-flex align-items-center justify-content-center">
+      <label class="form-label fw-bold">Grado de estudios:</label>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="preescolar" name="grado[]" value="Preescolar">
+        <label class="form-check-label" for="primaria">Preescolar</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="licenciatura" name="grado[]" value="Licenciatura">
+        <label class="form-check-label" for="secundaria">Licenciatura</label>
+      </div>
+    </div>
+
+    <!-- Columna 3 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="primaria" name="grado[]" value="Primaria">
+        <label class="form-check-label" for="bachillerato">Primaria</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="maestría" name="grado[]" value="Maestría">
+        <label class="form-check-label" for="tecnico">Maestría</label>
+      </div>
+    </div>
+
+    <!-- Columna 4 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="secundaria" name="grado[]" value="Secundaria">
+        <label class="form-check-label" for="licenciatura">Secundaria</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="doctorado" name="grado[]" value="Doctorado">
+        <label class="form-check-label" for="ingenieria">Doctorado</label>
+      </div>
+    </div>
+
+    <!-- Columna 5 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="bachilleratooequivalente" name="grado[]" value="Bachilleratooequivalente">
+        <label class="form-check-label" for="maestria">Bachillerato o equivalente</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sinespecificar" name="grado[]" value="Sinespecificar">
+        <label class="form-check-label" for="doctorado">Sin especificar</label>
+      </div>
+    </div>
+
+    <!-- Columna 6 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="técnico" name="grado[]" value="Técnico">
+        <label class="form-check-label" for="postdoc">Técnico</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="ninguno" name="grado[]" value="Ninguno">
+        <label class="form-check-label" for="otro">Ninguno</label>
+      </div>
+    </div>
+  </div>
+</div>    
+
+<!--Estado civil-->
+
+<style>
+  /* Ajusta la cercanía entre checkbox y texto */
+  .form-check {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra en la columna */
+    margin: 0;
+  }
+  .form-check-input {
+    margin: 0 !important;
+  }
+  .form-check-label {
+    margin: 0 !important;
+    padding-left: 4px !important; /* espacio mínimo entre cajita y palabra */
+  }
+</style>
+
+<div class="col-12 mb-3">
+  <div class="row align-items-center text-center">
+    <!-- Columna 1 -->
+    <div class="col">
+      <label class="form-label fw-bold mb-0">Estado civil:</label>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="soltero" name="estado_civil[]" value="Soltero">
+        <label class="form-check-label" for="soltero">Soltero</label>
+      </div>
+    </div>
+
+    <!-- Columna 3 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="casado" name="estado_civil[]" value="Casado">
+        <label class="form-check-label" for="casado">Casado</label>
+      </div>
+    </div>
+
+    <!-- Columna 4 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="unionlibre" name="estado_civil[]" value="Unión libre">
+        <label class="form-check-label" for="unionlibre">Unión libre</label>
+      </div>
+    </div>
+
+    <!-- Columna 5 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="divorciado" name="estado_civil[]" value="Divorciado">
+        <label class="form-check-label" for="divorciado">Divorciado</label>
+      </div>
+    </div>
+
+    <!-- Columna 6 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="viudo" name="estado_civil[]" value="Viudo">
+        <label class="form-check-label" for="viudo">Viudo</label>
+      </div>
+    </div>
+
+    <!-- Columna 7 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="separado" name="estado_civil[]" value="Separado">
+        <label class="form-check-label" for="separado">Separado</label>
+      </div>
+    </div>
+
+    <!-- Columna 8 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="concubinato" name="estado_civil[]" value="Concubinato">
+        <label class="form-check-label" for="otroEstado">Concubinato</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- Campo oculto para guardar la CURP completa -->
+  <input type="hidden" id="curp" name="curp" required />
+  <div class="invalid-feedback">La CURP debe tener 18 caracteres.</div>
+</div>
+
+<div class="col-12">
+<label class="form-label required">Género</label>
+<div class="d-flex flex-wrap gap-3">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="genero" id="genF" value="Mujer" required />
+<label class="form-check-label" for="genF">Mujer</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="genero" id="genM" value="Hombre" required />
+<label class="form-check-label" for="genM">Hombre</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="genero" id="genX" value="Prefiero no decir" required />
+<label class="form-check-label" for="genX">Prefiero no decir</label>
+<div class="invalid-feedback">Selecciona una opción.</div>
+</div>
+</div>
+</div>
+ 
+
+<div class="col-md-6">
+<label for="municipio" class="form-label required">Municipio</label>
+<select id="municipio" name="municipio" class="form-select" required>
+<option value="" selected disabled>Selecciona…</option>
+              <option>Acambay de ruiz castañeda</option>
+          <option>Acolman</option>
+          <option>Aculco</option>
+          <option>Almoloya de alquisiras</option>
+          <option>Almoloya de juárez</option>
+          <option>Almoloya del río</option>
+          <option>Amanalco</option>
+          <option>Amatepec</option>
+          <option>Amecameca</option>
+          <option>Apaxco</option>
+          <option>Atenco</option>
+          <option>Atizapán</option>
+          <option>Atizapán de zaragoza</option>
+          <option>Atlacomulco</option>
+          <option>Atlautla</option>
+          <option>Axapusco</option>
+          <option>Ayapango</option>
+          <option>Calimaya</option>
+          <option>Capulhuac</option>
+          <option>Coacalco de berriozábal</option>
+          <option>Coatepec harinas</option>
+          <option>Cocotitlán</option>
+          <option>Coyotepec</option>
+          <option>Cuautitlán</option>
+          <option>Cuautitlán izcalli</option>
+          <option>Chalco</option>
+          <option>Chapa de mota</option>
+          <option>Chapultepec</option>
+          <option>Chiautla</option>
+          <option>Chicoloapan</option>
+          <option>Chiconcuac</option>
+          <option>Chimalhuacán</option>
+          <option>Donato guerra</option>
+          <option>Ecatepec de morelos</option>
+          <option>Ecatzingo</option>
+          <option>Huehuetoca</option>
+          <option>Hueypoxtla</option>
+          <option>Huixquilucan</option>
+          <option>Isidro Fabela</option>
+          <option>Ixtapaluca</option>
+          <option>Ixtapan de la sal</option>
+          <option>Ixtapan del oro</option>
+          <option>Ixtlahuaca</option>
+          <option>Xalatlaco</option>
+          <option>Jaltenco</option>
+          <option>Jilotepec</option>
+          <option>Jilotzingo</option>
+          <option>Jiquipilco</option>
+          <option>Jocotitlán</option>
+          <option>Joquicingo</option>
+          <option>Juchitepec</option>
+          <option>Lerma</option>
+          <option>Malinalco</option>
+          <option>Melchor ocampo</option>
+          <option>Metepec</option>
+          <option>Mexicaltzingo</option>
+          <option>Morelos</option>
+          <option>Naucalpan de Juárez</option>
+          <option>Nextlalpan</option>
+          <option>Nezahualcóyotl</option>
+          <option>Nicolás romero</option>
+          <option>Nopaltepec</option>
+          <option>Ocoyoacac</option>
+          <option>Ocuilan</option>
+          <option>El Oro</option>
+          <option>Otumba</option>
+          <option>Otzoloapan</option>
+          <option>Otzolotepec</option>
+          <option>Ozumba</option>
+          <option>Papalotla</option>
+          <option>La Paz</option>
+          <option>Polotitlán</option>
+          <option>Rayón</option>
+          <option>San Antonio la Isla</option>
+          <option>San Felipe del Progreso</option>
+          <option>San Martín de las Pirámides</option>
+          <option>San Mateo Atenco</option>
+          <option>San Simón de Guerrero</option>
+          <option>Santo Tomás</option>
+          <option>Soyaniquilpan de juárez</option>
+          <option>Sultepec</option>
+          <option>Tecámac</option>
+          <option>Tejupilco</option>
+          <option>Temamatla</option>
+          <option>Temascalapa</option>
+          <option>Temascalcingo</option>
+          <option>Temascaltepec</option>
+          <option>Temoaya</option>
+          <option>Tenancingo</option>
+          <option>Tenango del aire</option>
+          <option>Tenango del valle</option>
+          <option>Teoloyucan</option>
+          <option>Teotihuacán</option>
+          <option>Tepetlaoxtoc</option>
+          <option>Tepetlixpa</option>
+          <option>Tepotzotlán</option>
+          <option>Tequixquiac</option>
+          <option>Texcaltitlán</option>
+          <option>Texcalyacac</option>
+          <option>Texcoco</option>
+          <option>tezoyuca</option>
+          <option>Tianguistenco</option>
+          <option>Timilpan</option>
+          <option>Tlalmanalco</option>
+          <option>Tlalnepantla de baz</option>
+          <option>Tlatlaya</option>
+          <option>Toluca</option>
+          <option>Tonatico</option>
+          <option>Tultepec</option>
+          <option>Tultitlán</option>
+          <option>Valle de Bravo</option>
+          <option>Villa de Allende</option>
+          <option>Villa del Carbón</option>
+          <option>Villa Guerrero</option>
+          <option>Villa Victoria</option>
+          <option>Xonacatlán</option>
+          <option>Zacazonapan</option>
+          <option>Zacualpan</option>
+          <option>Zinacantepec</option>
+          <option>Zumpahuacán</option>
+          <option>Zumpango</option>
+          <option>Luvianos</option>
+          <option>San José del Rincón</option>
+          <option>Tonanitla</option>  
+
+</select>
+<div class="invalid-feedback">Elige un municipio.</div>
+</div>
+
+
+<div class="col-md-6">
+<label for="delegacion" class="form-label required">Delegación</label>
+<select id="delegacion" name="delegacion" class="form-select" required disabled>
+<option value="" selected disabled>Selecciona el municipio primero…</option>
+</select>
+<div class="invalid-feedback">Selecciona una delegación.</div>
+</div>
+
+
+<div class="col-12">
+<label for="domicilio" class="form-label required">Domicilio</label>
+<textarea class="form-control" id="domicilio" name="domicilio" rows="2" placeholder="Calle, número, colonia" required></textarea>
+<div class="invalid-feedback">Escribe tu domicilio.</div>
+</div>
+
+
+<div class="col-md-6">
+<label for="telefono" class="form-label required">Teléfono</label>
+<input type="tel" class="form-control" id="telefono" name="telefono" inputmode="tel" placeholder="Ej. 7221234567" pattern="^[0-9\s\-\+]{10,15}$" required />
+<div class="form-text">Sólo números, 10 a 15 dígitos.</div>
+
+
+
+<select class="form-select" aria-label="Default select example">
+  <option selected>Apoyo que desea aplicar</option>
+  <option value="1">Semillas</option>
+  <option value="2">Animales</option>
+  <option value="3">Fertilizantes</option>
+</select>
+
+<script>
+  // Manejo de inputs CURP
+  const curpInputs = document.querySelectorAll(".curp-char");
+  const curpHidden = document.getElementById("curp");
+
+  // Avanza automáticamente al siguiente input
+  curpInputs.forEach((input, idx) => {
+    input.addEventListener("input", () => {
+      if (input.value.length === 1 && idx < curpInputs.length - 1) {
+        curpInputs[idx + 1].focus();
+      }
+      updateCurp();
+    });
+    // Permite retroceder con backspace
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !input.value && idx > 0) {
+        curpInputs[idx - 1].focus();
+      }
+    });
+  });
+
+  // Concatenar CURP en el campo oculto
+  function updateCurp() {
+    const curp = Array.from(curpInputs).map(i => i.value).join("");
+    curpHidden.value = curp;
+  }
+</script>
+</body>
+
+</html>
