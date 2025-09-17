@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Preregistro</title>
+<!-- Bootstrap 5 -->
+ <link rel="stylesheet" href="estilos.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+body { background: #f7f7f8; }
+.brand-bar { background: rgb(67,16,27); color: #fff; }
+.required::after { content:" *"; color: #dc3545; }
+</style>
+  <style>
+    /* Compactar texto */
+    p, label {
+      margin: 0;
+      padding: 0;
+      line-height: 1.1;
+    }
+
+    /* Compactar checkboxes */
+    .form-check {
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1 !important;
+    }
+
+    .form-check-input {
+      margin-top: 0 !important;
+      margin-right: 4px;
+    }
+
+    .form-check-label {
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1 !important;
+    }
+
+    /* Grid principal */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 200px auto 250px; 
+      gap: 15px;
+      align-items: start; /* pega los contenidos arriba */
+    }
+
+    /* Contenedor interno de checkboxes en 2 columnas */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;  /* espacio entre columnas */
+      row-gap: 1px;      /* 🔹 espacio mínimo entre filas */
+    }
+  </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+   <!-- --------------------------------------------------- P A R T E 1 ---------------------------------------------------------->
+<!-- Barra superior con categorización -->
+<div class="brand-bar py-3 mb-4">
+<div class="container d-flex justify-content-between align-items-center">
+  <img src="images/logedo.jpg" alt="logedo" width="185" height="78">
+  <img src="images/logob.jpg" alt="logob" width="185" height="78">
+  <img src="images/logsec.jpg" alt="logsec" width="185" height="78">
+<h1 class="h4 m-0">Formato D-1</h1>
+<span class="big opacity-75">Secretaría del Campo<br>Preregistro de apoyos</br></span>
+</footer>
+</div>
+</div>
+
+ <!-- pie de página para info de contactos -->
+  <footer style = "
+  background-color: rgb(67,16,27);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 13%;
+  font-family: Arial, sans-serif;
+">
+  <p>📍 Dirección: Conjunto SEDAGRO s/n, Rancho San Lorenzo, Metepec, Estado de México. C.P. 52140</p>
+  <p>📍 SECAMPO, Subdirección de Planeación Sectorial: Unidad de Información, Planeación, Programación y Evaluación (UIPPE)</p> 
+  <p>📞 Teléfono: 722 275 6421. Ext: 17047 | ✉️ Correo: sectorial.uippe@edomex.gob.mx</p>  
+
+    <!-- Redes sociales con Font Awesome -->
+    <div style="margin-top: 10px;">
+      <a href="https://facebook.com" target="_blank" style="color:white; margin: 0 10px;">
+        <i class="fa-brands fa-facebook fa-2x"></i>
+      </a>
+      <a href="https://x.com/campoedomex?lang=en" target="_blank" style="color:white; margin: 0 10px;">
+        <i class="fa-brands fa-x-twitter fa-2x"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" style="color:white; margin: 0 10px;">
+        <i class="fa-brands fa-instagram fa-2x"></i>
+      </a>
+    </div>
+</div>
+</footer>
+ <!-- Aviso importante-->
+<div class="container"style="padding-bottom: 15%;">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 col-xl-9"> <!-- más ancho --> 
+      <div class="card shadow-sm mb-5">
+        <div class="card-body p-4 p-md-5">
+<h2 class="h5 mb-4"style= "font-family: Arial, sans-serif; font-size: 10px;color: #333; margin: 0; line-height: 9px;"><b>AVISO IMPORTANTE:</b> Antes de llenar el presente formato, revise el Aviso de Privacidad del Sistema de Datos Presonales
+  de la Secretaría del Campo, el cual se pondrá a su disposición en el momento de requisitar su solicitud, también lo encontrará en el 
+  sitio web: http://secampo.edomex.gob.mx/aviso_privacidad o el Módulo de Acceso a la Unidad de Información o en la Delegación Regional
+  de Desarrollo Agropecuario correspondientee de la Secretaría del Campo.
+</h2>
+ <!-- Fecha de expedición -->
+<form>
+  <label for="fecha">Fecha de expedición:</label>                    
+  <input type="date" id="fecha" name="fecha">
+  <button type="submit">Enviar</button>
+</form>
+ 
+ <!-- Checks boxs de los programas  -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+  
+  <!------------------------------------- Columna 1 Programa Por el Rescate al Campo--------------------------------------------->
+  <div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="variante" id="variante1" value="Programa Por el Rescate al Campo" required />
+      <label class="form-check-label" for="variante1"><b>Programa Por el Rescate al Campo</b></label>
+    </div>
+    <p><b>Vertiente:</b></p>
+    <div class="d-flex flex-wrap gap-3">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="vertiente" id="vert1" value="Por un Campo Digno" required />
+        <label class="form-check-label" for="vert1">Por un Campo Digno</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="vertiente" id="vert2" value="Transformación y Comercialización Agropecuaria" required />
+        <label class="form-check-label" for="vert2">Transformación y Comercialización Agropecuaria</label>
+      </div>
+    </div>
+  </div>
+
+  <!-------------------------------------- Columna 2 Programa Transformando el Campo--------------------------------------------->
+  <div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="variante" id="variante2" value="Programa Transformando el Campo" required />
+      <label class="form-check-label" for="variante2"><b>Programa Transformando el Campo</b></label>
+    </div>
+    <p><b>Vertiente:</b></p>
+    <div class="d-flex flex-wrap gap-3">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="vertiente" id="vert3" value="Agropecuaria y Acuícola" required />
+        <label class="form-check-label" for="vert3">Agropecuaria y Acuícola</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="vertiente" id="vert4" value="Infraestructura Rural" required />
+        <label class="form-check-label" for="vert4">Infraestructura Rural</label>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <div class="form-grid">
+    
+    <!-- Columna 1: Título -->
+    <p style="font-weight: bold;">Tipo de solicitud:</p>
+    
+    <!-- Columna 2: Checkboxes en 2 columnas compactas -->
+    <div class="checkbox-grid">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sol1" name="solicitud" value="Persona física" />
+        <label class="form-check-label" for="sol1">Persona física</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sol2" name="solicitud" value="Ayuntamiento" />
+        <label class="form-check-label" for="sol2">Ayuntamiento</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sol3" name="solicitud" value="Organización de personas productoras" />
+        <label class="form-check-label" for="sol3">Organización de personas productoras</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sol4" name="solicitud" value="Institución educativa" />
+        <label class="form-check-label" for="sol4">Institución educativa</label>
+      </div>
+    </div>
+    
+    <!-- Columna 3: Delegación regional -->
+    <div style="display: flex; flex-direction: column;">
+      <label for="delegacion" style="font-weight: bold; margin-bottom: 2px;">Delegación Regional de Desarrollo Agropecuario:</label>
+      <input type="text" id="delegacion" name="delegacion" placeholder="Escribe aquí..." 
+             style="padding: 4px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+    
+  </div>
+
+
+ <!-- --------------------------------------------------- P A R T E 2 -------------------------------------------------------- -->
+<!-- Nombre del productor-->
+<br><p style="text-align: center;">Persona productora y/o representante</p></br>
+<form id="formPrerregistro" class="needs-validation" novalidate>
+<div class="row g-1">
+<div class="col-md-4">
+<label for="nombre" class="form-label required">Nombre(s)</label>
+<input type="text" class="form-control" id="nombre" name="nombre" required />
+<div class="invalid-feedback">Por favor, escribe tu(s) nombre(s).</div>
+</div>
+<div class="col-md-4">
+<label for="apellidos" class="form-label required">Apellido paterno</label>
+<input type="text" class="form-control" id="apellidos" name="apellido paterno" required />
+<div class="invalid-feedback">Indica tu apellido.</div>
+</div>
+<div class="col-md-4">
+<label for="apellidos" class="form-label required">Apellido materno</label>
+<input type="text" class="form-control" id="apellidos" name="apellido materno" required />
+<div class="invalid-feedback">Indica tu apellido.</div>
+</div>
+
+<!-- CURP-->
+<div class="col-12 mb-3 text-center">
+  <div class="d-inline-flex align-items-center justify-content-center">
+    <label for="curp" class="form-label required me-2 mb-0">CURP:</label>
+    <div id="curp-inputs" class="d-flex gap-0">
+      <script>
+        // Genera 18 inputs chiquitos
+        document.write(
+          Array.from({ length: 18 }, (_, i) =>
+            `<input type="text" class="form-control text-uppercase curp-char" 
+                     maxlength="1" pattern="[A-Za-z0-9]" 
+                     style="width: 15px; height: 22px; padding: 2px; text-align:center; font-size:12px;" 
+                     required 
+                     data-index="${i}" />`
+          ).join("")
+        );
+      </script>
+    </div>
+  </div>
+  <!-- Campo oculto para guardar la CURP completa -->
+  <input type="hidden" id="curp" name="curp" required />
+  <div class="invalid-feedback">La CURP debe tener 18 caracteres.</div>
+</div>
+
+<!--Grado de estudios-->
+<style>
+  .form-check-label {
+    margin-left: 0px;  /* prueba con 0px si lo quieres pegado del todo */
+  }
+  /* Hace que los checkboxes estén muy pegados entre sí */
+  .grado-check .form-check {
+    margin-bottom: 2px;   /* espacio mínimo entre filas */
+  }
+  .grado-check .form-check-input {
+    margin-top: 0.2rem;   /* alinea verticalmente la cajita */
+  }
+</style>
+
+<div class="col-12 mb-3">
+  <div class="row text-center grado-check">
+    <!-- Columna 1 -->
+    <div class="col-2 d-flex align-items-center justify-content-center">
+      <label class="form-label fw-bold">Grado de estudios:</label>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="preescolar" name="grado[]" value="Preescolar">
+        <label class="form-check-label" for="primaria">Preescolar</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="licenciatura" name="grado[]" value="Licenciatura">
+        <label class="form-check-label" for="secundaria">Licenciatura</label>
+      </div>
+    </div>
+
+    <!-- Columna 3 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="primaria" name="grado[]" value="Primaria">
+        <label class="form-check-label" for="bachillerato">Primaria</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="maestría" name="grado[]" value="Maestría">
+        <label class="form-check-label" for="tecnico">Maestría</label>
+      </div>
+    </div>
+
+    <!-- Columna 4 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="secundaria" name="grado[]" value="Secundaria">
+        <label class="form-check-label" for="licenciatura">Secundaria</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="doctorado" name="grado[]" value="Doctorado">
+        <label class="form-check-label" for="ingenieria">Doctorado</label>
+      </div>
+    </div>
+
+    <!-- Columna 5 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="bachilleratooequivalente" name="grado[]" value="Bachilleratooequivalente">
+        <label class="form-check-label" for="maestria">Bachillerato o equivalente</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="sinespecificar" name="grado[]" value="Sinespecificar">
+        <label class="form-check-label" for="doctorado">Sin especificar</label>
+      </div>
+    </div>
+
+    <!-- Columna 6 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="técnico" name="grado[]" value="Técnico">
+        <label class="form-check-label" for="postdoc">Técnico</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="ninguno" name="grado[]" value="Ninguno">
+        <label class="form-check-label" for="otro">Ninguno</label>
+      </div>
+    </div>
+  </div>
+</div>    
+
+<!--Estado civil-->
+
+<style>
+  /* Ajusta la cercanía entre checkbox y texto */
+  .form-check {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra en la columna */
+    margin: 0;
+  }
+  .form-check-input {
+    margin: 0 !important;
+  }
+  .form-check-label {
+    margin: 0 !important;
+    padding-left: 4px !important; /* espacio mínimo entre cajita y palabra */
+  }
+</style>
+
+<div class="col-12 mb-3">
+  <div class="row align-items-center text-center">
+    <!-- Columna 1 -->
+    <div class="col">
+      <label class="form-label fw-bold mb-0">Estado civil:</label>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="soltero" name="estado_civil[]" value="Soltero">
+        <label class="form-check-label" for="soltero">Soltero</label>
+      </div>
+    </div>
+
+    <!-- Columna 3 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="casado" name="estado_civil[]" value="Casado">
+        <label class="form-check-label" for="casado">Casado</label>
+      </div>
+    </div>
+
+    <!-- Columna 4 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="unionlibre" name="estado_civil[]" value="Unión libre">
+        <label class="form-check-label" for="unionlibre">Unión libre</label>
+      </div>
+    </div>
+
+    <!-- Columna 5 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="divorciado" name="estado_civil[]" value="Divorciado">
+        <label class="form-check-label" for="divorciado">Divorciado</label>
+      </div>
+    </div>
+
+    <!-- Columna 6 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="viudo" name="estado_civil[]" value="Viudo">
+        <label class="form-check-label" for="viudo">Viudo</label>
+      </div>
+    </div>
+
+    <!-- Columna 7 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="separado" name="estado_civil[]" value="Separado">
+        <label class="form-check-label" for="separado">Separado</label>
+      </div>
+    </div>
+
+    <!-- Columna 8 -->
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="concubinato" name="estado_civil[]" value="Concubinato">
+        <label class="form-check-label" for="otroEstado">Concubinato</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Campo oculto para guardar la CURP completa -->
+  <input type="hidden" id="curp" name="curp" required />
+  <div class="invalid-feedback">La CURP debe tener 18 caracteres.</div>
+</div>
+
+<!--......................................CAMPOS PARA ESCRIBIR UBICACIÓN............................. -->
+<div class="container">
+  <!-- Fila 1 -->
+  <div class="row mb-3">
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="colonia1" class="form-label me-2 mb-0">Colonia:</label>
+      <input type="text" class="form-control" id="colonia1" name="colonia1">
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="localidad1" class="form-label me-2 mb-0">Localidad:</label>
+      <input type="text" class="form-control" id="localidad1" name="localidad1">
+    </div>
+  </div>
+
+  <!-- Fila 2 -->
+  <div class="row mb-3">
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="municipio" class="form-label me-2 mb-0">Municipio:</label>
+      <input type="text" class="form-control" id="municipio" name="municipio">
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="refdom" class="form-label me-2 mb-0">Referencia Domiciliaria:</label>
+      <input type="text" class="form-control" id="refdom" name="refdom">
+    </div>
+  </div>
+
+  <!-- Fila 3 -->
+  <div class="row mb-3">
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="entrecalle" class="form-label me-2 mb-0">Entre calle:</label>
+      <input type="text" class="form-control" id="entrecalle" name="entrecalle">
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="ycalle" class="form-label me-2 mb-0">Y calle:</label>
+      <input type="text" class="form-control" id="ycalle" name="ycalle">
+    </div>
+  </div>
+
+  <!-- Fila 4 -->
+  <div class="row mb-3">
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="telefono" class="form-label me-2 mb-0">Teléfono:</label>
+      <input type="text" class="form-control" id="telefono" name="telefono">
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="correoel" class="form-label me-2 mb-0">Correo electrónico:</label>
+      <input type="text" class="form-control" id="correoel" name="correoel">
+    </div>
+  </div>
+</div>
+<!--....................................................................  .UNIDAD PRODUCTIVA...............................................................-->
+<br><p style="text-align: center;">Unidad productiva</p></br>
+
+<div class="container">
+  <!-- Fila 1 -->
+  <div class="row mb-3">
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="cultesp" class="form-label me-2 mb-0">Cultivo/especie:</label>
+      <input type="text" class="form-control" id="cultesp" name="cultesp">
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="localidad" class="form-label me-2 mb-0">Localidad:</label>
+      <input type="text" class="form-control" id="localidad" name="localidad">
+    </div>
+  </div>
+
+<!-- Fila Georreferencia -->
+<div class="row mb-3 align-items-center">
+  <!-- Texto Georreferencia -->
+  <div class="col-md-3 d-flex align-items-center">
+    <label class="form-label fw-bold mb-0">Georreferencia:</label>
+  </div>
+
+  <!-- Campo Latitud -->
+  <div class="col-md-4 text-center">
+    <input type="text" class="form-control" id="lat" name="lat">
+    <small class="form-text text-muted">Latitud</small>
+  </div>
+
+  <!-- Campo Longitud -->
+  <div class="col-md-4 text-center">
+    <input type="text" class="form-control" id="lng" name="lng">
+    <small class="form-text text-muted">Longitud</small>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Fila 1 -->
+  <div class="row mb-3">
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="municipio" class="form-label me-2 mb-0">Municipio:</label>
+      <input type="text" class="form-control" id="municipio" name="municipio">
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="cantdcabe" class="form-label me-2 mb-0">Cantidad de cabezas:</label>
+      <input type="text" class="form-control" id="cantdcabe" name="cantdcabe">
+    </div>
+  </div>
+
+  <!-- Fila 2 -->
+  <div class="row mb-3">
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="suphariego" class="form-label me-2 mb-0">Superficie a beneficiar (hectáreas): Riego</label>
+      <input type="text" class="form-control" id="suphariego" name="suphariego">
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+      <label for="temporal" class="form-label me-2 mb-0">Temporal:</label>
+      <input type="text" class="form-control" id="temporal" name="temporal">
+    </div>
+  </div>
+<!--..................................................................APOYO SOLICITADO...................................................................-->
+<br><p style="text-align: center;">Apoyo solicitado</p></br>
+
+<div class="table-responsive">
+  <table class="table table-bordered text-center align-middle">
+    <thead class="table-light">
+      <tr>
+        <th>ID</th>
+        <th>Concepto de apoyo y/o número de cabezas</th>
+        <th>Monto de la aportación de la persona solicitante $</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" name="id1"></td>
+        <td><input type="text" class="form-control" name="concepto1"></td>
+        <td><input type="text" class="form-control" name="monto1"></td>
+      </tr>
+      <tr>
+        <td><input type="text" class="form-control" name="id2"></td>
+        <td><input type="text" class="form-control" name="concepto2"></td>
+        <td><input type="text" class="form-control" name="monto2"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Total alineado a la derecha -->
+<div class="d-flex justify-content-end mt-2">
+  <label for="total" class="form-label me-2 fw-bold">Total:</label>
+  <input type="text" class="form-control w-auto" id="total" name="total">
+</div>
+
+<!--...............................................requisito con check boxs alineados sin tabla (pendiente)................................................................-->
+<style>
+  .tabla-encabezado th {
+    background-color: rgb(67,16,27) !important;
+    color: white !important;
+  }
+</style>
+
+<br><div class="table-responsive">
+  <table class="table table-borderless align-middle">
+    <thead class="tabla-encabezado text-center">
+      <tr>
+        <th style="width:5%;" >Sí</th>
+        <th style="width:5%;">No</th>
+        <th style="width:50%;">Requisitos</th>
+        <th style="width:5%;">Sí</th>
+        <th style="width:5%;">No</th>
+        <th style="width:30%;">Criterios de priorización</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Requisito 1 -->
+      <tr>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-start" style ="font-size: 0.8em;">Solicitud de inscripción al programa medinate escrito libre, el cual deberá especificar: nombre de la persona solicitante,dirección,teléfono,correo electrónico,apoyo solicitado y firma autógrafa.</td>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-start" style ="font-size: 0.8em;">  Mujeres jefas de familia</td>
+      </tr>
+      <!-- Requisito 2 -->
+      <tr>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-start"style ="font-size: 0.8em;">Identificación oficial: INE, pasaporte o INAPAM</td>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-start" style ="font-size: 0.8em;">  Personas con discapacidad</td>
+      </tr>
+      <!-- Requisito 3 -->
+      <tr>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-start"style ="font-size: 0.8em;">CURP: para la integración en el padrón de beneficiarios</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <!-- Requisito 4 -->
+      <tr>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+        <td class="text-start"style ="font-size: 0.8em;">Copia del comprobante de domicilio del representantelegal solicitante: recibo de luz, agua, teléfono, predial, constancia de residencia, vecindad o domiciliaria,
+          expedida por el ayuntamiento con sello y firma autógrafa de la autoridad que le gestiona, con una vigencia no mayor a 3 meses anteriores a la fecha de solicitud.<br>Las demás que determine la instancia responsable,referidas en el Anexo Técnico</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<!--...........................................................................FIRMA DE ACEPTACIÓN  DE LOS DATOS PERSONALES............................................................................................-->
+<p>SOLICITANTE <br>NOMBRE Y FIRMA:</p>
+<p>Si aún no cuenta con Llave MX, realizar registro aquí:  <a href="https://llave.gob.mx/RegistroCiudadano.xhtml" target="_blank"> Obtener Llave MX</a> </p>
+
+<br><p style="font-size: 0.5em;">De conformidad con el articulo 31 de la Ley de Protección de Datos Personales en Poseción de Sujetos Obligados del Estado de México y Municipios, los datos personales recabados,serán protegidos, incorporados y <br>
+tratados conforme a la Ley de Transparencia y Acceso a la información Pública del Estado de México y Municipios. <br>
+Bajo protesta de decir la verdad, manifiesto que la información proporcionada es verídica.Apartado 7.2 restricciones y generalidades inciso b<br>
+Autorizo que el personal responsable de operar el programa pueda verificar los datos asentados en esta solicitud y, en caso de encontarse falsedad en los mismos, podrá ser motivo de que el apoyo se cancele, aún cuando<br>
+ya se haya asignado.<br>
+Al firmar la presente solicitud,manifiesto conocer los derechos y obligaciones asociados al programa y me comprometo a cumplir las responsabilidades que se deriven de la asignación del apoyo.<br>
+</p>
+<br><p style= "text-align: center;font-size: 0.5em;">Cualquier irregularidad reportarla a las oficinas centrales de la secretaría del Campo al teléfono: 722 275 64 00 extensiones: 5716, 5702, 5720 y 5795 ó al Órgano Interno de Control</br>
+de la Secretaría del Campo, extensiones: 5536, 5537 y 5538 o a la Secretaría de la Contraloría a los teléfonos:800 696 96 96 y 722 275 67 00, extensiones: 6524 y 6554.</p> </br>
+
+
+     
+
+<!-- texto escrito para copiar y pegar
+ DOCUMENTO INTRANSFERIBLE Y NO NEGOCIABLE
+ ESTE PROGRAMA ES PÚBLICO, AJENO A CUALQUIER PARTIDO POLÍTICO, QUEDA PROHIBIDO SU USO PARA FINES DISTINTOS AL DESARROLLO SOCIAL QUIEN HAGA USO INDEBIDO LOS RECURSOS DE ESTE PROGRAMA DEBERÁ SER DENUNCIADO Y SANCIONADO
+ ANTE LAS AUTORIDADES CONFORME A LO QUE MENCIONE LA LEY DE MATERIA
+
+
+ TRÁMITE GRATUITO ORIGINAL-->
+
+ <!--........................................................................................................................................................................................................-->
+
+<p>--------------------------------------------------------------------------------------------------------------------------------</p>
+  <img src="images/logedo.jpg" alt="logedo" width="92" height="39">
+  <img src="images/logob.jpg" alt="logob" width="92" height="39">
+  <img src="images/logsec.jpg" alt="logsec" width="92" height="39">
+ <br><p style="text-align: center;"><b>Talón para la persona solicitante</b></p></br>         
+
+<p class="h5 mb-4"style= "font-family: Arial, sans-serif; font-size: 10px;color: #333; margin: 0; line-height: 9px;"><b>AVISO IMPORTANTE:</b> Antes de llenar el presente formato, revise el Aviso de Privacidad del Sistema de Datos Presonales
+  de la Secretaría del Campo, el cual se pondrá a su disposición en el momento de requisitar su solicitud, también lo encontrará en el 
+  sitio web: http://secampo.edomex.gob.mx/aviso_privacidad o el Módulo de Acceso a la Unidad de Información o en la Delegación Regional
+  de Desarrollo Agropecuario correspondientee de la Secretaría del Campo.</p>
+
+
+ <!-- Fecha de expedición del talón-->
+<form>
+  <label for="fecha">Fecha de expedición:</label>                    
+  <input type="date" id="fecha" name="fecha">
+  <button type="submit">Guardar</button>
+</form>
+
+<br><br><p style="font-size: 0.5em;">De conformidad con el articulo 31 de la Ley de Protección de Datos Personales en Poseción de Sujetos Obligados del Estado de México y Municipios, los datos personales recabados,serán protegidos, incorporados y <br>
+tratados conforme a la Ley de Transparencia y Acceso a la información Pública del Estado de México y Municipios. <br>
+Bajo protesta de decir la verdad, manifiesto que la información proporcionada es verídica.Apartado 7.2 restricciones y generalidades inciso b<br>
+Autorizo que el personal responsable de operar el programa pueda verificar los datos asentados en esta solicitud y, en caso de encontarse falsedad en los mismos, podrá ser motivo de que el apoyo se cancele, aún cuando<br>
+ya se haya asignado.<br>
+Al firmar la presente solicitud,manifiesto conocer los derechos y obligaciones asociados al programa y me comprometo a cumplir las responsabilidades que se deriven de la asignación del apoyo.<br>
+</p>
+<br><p style= "text-align: center;font-size: 0.5em;">Cualquier irregularidad reportarla a las oficinas centrales de la secretaría del Campo al teléfono: 722 275 64 00 extensiones: 5716, 5702, 5720 y 5795 ó al Órgano Interno de Control</br>
+de la Secretaría del Campo, extensiones: 5536, 5537 y 5538 o a la Secretaría de la Contraloría a los teléfonos:800 696 96 96 y 722 275 67 00, extensiones: 6524 y 6554.</p> </br>
+
+
+
+<script>
+  // Manejo de inputs CURP
+  const curpInputs = document.querySelectorAll(".curp-char");
+  const curpHidden = document.getElementById("curp");
+
+  // Avanza automáticamente al siguiente input
+  curpInputs.forEach((input, idx) => {
+    input.addEventListener("input", () => {
+      if (input.value.length === 1 && idx < curpInputs.length - 1) {
+        curpInputs[idx + 1].focus();
+      }
+      updateCurp();
+    });
+    // Permite retroceder con backspace
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !input.value && idx > 0) {
+        curpInputs[idx - 1].focus();
+      }
+    });
+  });
+
+  // Concatenar CURP en el campo oculto
+  function updateCurp() {
+    const curp = Array.from(curpInputs).map(i => i.value).join("");
+    curpHidden.value = curp;
+  }
+</script>
+</body>
+
+</html>
