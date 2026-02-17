@@ -268,7 +268,7 @@ async function actualizarMapa({ concurrency = 6, removeMissing = true } = {}) {
 }
 
 // Cargar polígono EDOMEX y lanzar actualización 
-fetch("https://raw.githubusercontent.com/lulu021/estaciones-meteorol-gicas-edomex/main/lim_Est.geojson")
+fetch("lim_Est.geojson")
   .then(r => r.json())
   .then(data => {
     edoMexGeojson = data;
@@ -299,7 +299,7 @@ function getColor(delegacion) {
 }
 
 // Delegaciones con estilo dinámico
-fetch("https://raw.githubusercontent.com/lulu021/estaciones-meteorol-gicas-edomex/main/Delegaciones%20Regionales%20agropecuarias.geojson")
+fetch("Delegaciones%20Regionales%20agropecuarias.geojson")
   .then(r => r.json())
   .then(delegacionesGeoJSON => {
     L.geoJSON(delegacionesGeoJSON, {
@@ -321,7 +321,7 @@ fetch("https://raw.githubusercontent.com/lulu021/estaciones-meteorol-gicas-edome
     }).addTo(map);
   });
 // Límites municipales
-fetch("https://raw.githubusercontent.com/lulu021/estaciones-meteorol-gicas-edomex/main/lim_munEdo.geojson")
+fetch("lim_munEdo.geojson")
   .then(r => r.json())
   .then(data => {
     L.geoJSON(data, {
